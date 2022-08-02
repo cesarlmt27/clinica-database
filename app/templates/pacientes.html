@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<center>
+<h3 class="list-group-item list-group-item-danger list-group-item-danger" aria-disabled="true">PACIENTES</h3>
+</center>
+
+<table class="table" class="table-danger">
+  <thead>
+    <tr class="table-danger">
+      <th scope="col">Número del paciente</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Rut</th>
+      <th scope="col">Previsión medica</th>
+      <th scope="col">Número del medico</th>
+      <th scope="col">Número de la ficha medica</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for i in paciente %}
+    <tr>
+      <th scope="row">{{i[0]}}</th>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}-{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td>{{i[8]}}</td>
+      <td><a href="/registro_salida/{{i[0]}}" type="button" class="btn btn-outline-danger btn-sm">Alta medica</a></td>
+      <td><a href="/editar_ficha/{{i[0]}}" type="button" class="btn btn-outline-danger btn-sm">Editar ficha médica</a></td>
+      <td><a href="/actualizar_medico/{{i[0]}}" type="button" class="btn btn-outline-danger btn-sm">Actualizar medico</a></td>
+      <td><a href="/actualizar_ingreso/{{i[0]}}" type="button" class="btn btn-outline-danger btn-sm">Actualizar ingreso</a></td>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+  
+</table>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<center>
+    <h3 class="list-group-item list-group-item-action list-group-item-info" disabled aria-disabled="true">Ingreso de paciente</li>
+  </center>
+  
+  <center>
+    <form role="form" class="needs-validation" action="" method="post" enctype="application/x-www-form-urlencoded">
+      <div class="mb-3"> 
+        <label for="exampleInputEmail1" class="form-label" >Nombre</label>
+        <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:600px" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Rut</label>
+        <input type="text" name="rut" class="form-control" id="exampleInputPassword1" style="width:600px" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Digito verificador</label>
+        <input type="text" name="dv" class="form-control" id="exampleInputPassword1" style="width:600px" required>
+      </div>
+      <button type="submit" class="btn btn-info">Registrar</button>
+    </form>
+  </center>
+
+{% endblock %}

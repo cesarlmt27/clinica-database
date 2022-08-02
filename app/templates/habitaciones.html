@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<center>
+  <h3 class="list-group-item list-group-item-action list-group-item-info" disabled aria-disabled="true">HABITACIONES</li>
+</center>
+ 
+<table class="table" class="table-info">
+  <thead>
+    <tr class="table-info">
+      <th scope="col">Identificador</th>
+      <th scope="col">Nombre de la clinica</th>
+      <th scope="col">Número de habitación</th>
+      <th scope="col">Número del paciente</th>
+      <th scope="col">Estado</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for i in habitacion %}
+    <tr>
+      <th scope="row">{{i[0]}}</th>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td><a href="/ingreso_habitacion/{{i[0]}}" type="button" class="btn btn-outline-info btn-sm">Actualizar paciente</a></td>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+  
+</table>
+
+{% endblock %}

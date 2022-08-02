@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<center>
+  <h3 class="list-group-item list-group-item-primary list-group-item-primary" aria-disabled="true">MEDICOS</h3>
+</center>
+
+  
+<table class="table" class="table-primary">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">Identificador</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Rut</th>
+      <th scope="col">Especialidad</th>
+      <th scope="col">Número de la clinica</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for i in medico %}
+    <tr>
+      <th scope="row">{{i[0]}}</th>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}-{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td><a href="/borrar_medico/{{i[0]}}" type="button" class="btn btn-outline-primary btn-sm">Borrar</a></td>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+  
+</table>
+
+{% endblock %}

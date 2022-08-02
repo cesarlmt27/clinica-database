@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<center>
+  <h3 class="list-group-item list-group-item-primary list-group-item-primary" aria-disabled="true">Registro de médicos</h3>
+</center>
+
+<center>
+  <form role="form" action="" method="post" enctype="application/x-www-form-urlencoded">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input type="text" name="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:600px">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Apellido</label>
+      <input type="text" name="apellido" class="form-control" id="exampleInputPassword1" style="width:600px">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Edad</label>
+        <input type="text" name="edad" class="form-control" id="exampleInputPassword1" style="width:600px">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Rut</label>
+        <input type="text" name="rut" class="form-control" id="exampleInputPassword1" style="width:600px">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Digito Verificador</label>
+        <input type="text" name="dv" class="form-control" id="exampleInputPassword1" style="width:600px">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Especialidad</label>
+        <input type="text" name="especialidad" class="form-control" id="exampleInputPassword1" style="width:600px">
+      </div>
+    <button type="submit" class="btn btn-primary">Registrar</button>
+  </form>
+</center>
+
+{% endblock %}

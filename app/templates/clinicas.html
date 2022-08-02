@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<center>
+  <h3 class="list-group-item list-group-item-action list-group-item-warning" aria-disabled="true">CLINICAS</h3>
+</center>
+
+
+<table class="table" class="table-warning">
+  <thead>
+    <tr class="table-warning">
+      <th scope="col">Identificador</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Cantidad de habitaciones</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  {% for i in clinica %}
+    <tr>
+      <th scope="row">{{i[0]}}</th>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td><a href="/registro_habitacion/{{i[0]}}" type="submit" class="btn btn-warning">Registrar habitación</a></td>
+  {% endfor %}
+    
+</table>
+{% endblock %}

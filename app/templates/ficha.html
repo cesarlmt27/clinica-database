@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<center>
+  <h3 class="list-group-item list-group-item-info list-group-item-dark" aria-disabled="true">FICHAS MEDICAS</h3>
+</center>
+
+
+  <table class="table" class="table-dark">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col">Identificador</th>
+        <th scope="col">Diagnóstico</th>
+        <th scope="col">Alergías</th>
+        <th scope="col">Tipo de sangre</th>
+        <th scope="col">Peso del paciente</th>
+        <th scope="col">Intervención quirurgica</th>
+        <th scope="col">Enfermedad cronica</th>
+        <th scope="col">Número del paciente</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for i in ficha_medica %}
+      <tr>
+        <th scope="row">{{i[0]}}</th>
+        <td>{{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[5]}}</td>
+        <td>{{i[6]}}</td>
+        <td>{{i[7]}}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+    
+  </table>
+
+{% endblock %}
